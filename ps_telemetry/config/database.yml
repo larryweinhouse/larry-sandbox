@@ -1,0 +1,13 @@
+development:
+  adapter: sqlite3
+  database: db/data.telemetry
+  pool: 5
+  timeout: 5000
+production:
+  adapter: mysql2
+  encoding: utf8
+  database: stats
+  username: ps
+  host: partner-services-mysql.marathon.la.mesos.factual.com
+  port: 32306
+  reconnect: true

@@ -1,0 +1,34 @@
+# Logfile created on 2015-10-26 12:14:05 -0700 by logger.rb/31641
+D, [2015-10-26T12:14:05.821572 #26990] DEBUG -- :   [1m[36m (95.7ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+D, [2015-10-26T12:14:06.032335 #26990] DEBUG -- :   [1m[35m (204.9ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+D, [2015-10-26T12:14:06.039416 #26990] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (4.8ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2015-10-26T12:14:06.045803 #26990]  INFO -- : Migrating to Schema (1)
+D, [2015-10-26T12:14:06.132509 #26990] DEBUG -- :   [1m[35m (79.5ms)[0m  CREATE TABLE `telemetries` (`id` varchar(36), `partner` varchar(50), `outpost_application` varchar(30), `group_id` varchar(255), `requests` bigint, `hits` bigint, `date` date) ENGINE=InnoDB
+D, [2015-10-26T12:14:06.276253 #26990] DEBUG -- :   [1m[36m (140.3ms)[0m  [1mCREATE UNIQUE INDEX `index_telemetries_on_id`  ON `telemetries` (`id`) [0m
+D, [2015-10-26T12:14:06.434401 #26990] DEBUG -- :   [1m[35m (155.7ms)[0m  CREATE  INDEX `index_telemetries_on_partner`  ON `telemetries` (`partner`) 
+D, [2015-10-26T12:14:06.560442 #26990] DEBUG -- :   [1m[36m (123.1ms)[0m  [1mCREATE  INDEX `index_telemetries_on_outpost_application`  ON `telemetries` (`outpost_application`) [0m
+D, [2015-10-26T12:14:06.706860 #26990] DEBUG -- :   [1m[35m (143.3ms)[0m  CREATE  INDEX `index_telemetries_on_group_id`  ON `telemetries` (`group_id`) 
+D, [2015-10-26T12:14:06.852092 #26990] DEBUG -- :   [1m[36m (142.1ms)[0m  [1mCREATE  INDEX `index_telemetries_on_date`  ON `telemetries` (`date`) [0m
+D, [2015-10-26T12:14:07.075704 #26990] DEBUG -- :   [1m[35m (219.6ms)[0m  CREATE TABLE `load_logs` (`id` int(11) auto_increment PRIMARY KEY, `created_at` datetime, `email_date` datetime, `loader` varchar(64), `new_lines` int(11) DEFAULT 0, `duplicate_lines` int(11) DEFAULT 0, `line_errors` int(11) DEFAULT 0, `attachments` int(11) DEFAULT 0) ENGINE=InnoDB
+D, [2015-10-26T12:14:07.231802 #26990] DEBUG -- :   [1m[36m (152.3ms)[0m  [1mCREATE  INDEX `index_load_logs_on_loader`  ON `load_logs` (`loader`) [0m
+D, [2015-10-26T12:14:07.251655 #26990] DEBUG -- :   [1m[35m (1.3ms)[0m  BEGIN
+D, [2015-10-26T12:14:07.263023 #26990] DEBUG -- :   [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('1')[0m
+D, [2015-10-26T12:14:07.298133 #26990] DEBUG -- :   [1m[35m (34.7ms)[0m  COMMIT
+D, [2015-10-26T12:27:25.353857 #27198] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (3.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+D, [2015-10-26T12:27:25.369261 #27198] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.7ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+D, [2015-10-26T12:27:25.374355 #27198] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+D, [2015-10-26T23:49:14.040941 #7184] DEBUG -- :   [1m[36m (632.9ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+D, [2015-10-26T23:49:14.759382 #7184] DEBUG -- :   [1m[35m (715.3ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+D, [2015-10-26T23:49:14.766858 #7184] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (5.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2015-10-26T23:49:14.773722 #7184]  INFO -- : Migrating to Schema (1)
+D, [2015-10-26T23:49:15.276158 #7184] DEBUG -- :   [1m[35m (496.2ms)[0m  CREATE TABLE `telemetries` (`id` varchar(36), `partner` varchar(50), `outpost_application` varchar(30), `group_id` varchar(255), `requests` bigint, `hits` bigint, `date` date) ENGINE=InnoDB
+D, [2015-10-26T23:49:15.953170 #7184] DEBUG -- :   [1m[36m (673.9ms)[0m  [1mCREATE UNIQUE INDEX `index_telemetries_on_id`  ON `telemetries` (`id`) [0m
+D, [2015-10-26T23:49:16.278590 #7184] DEBUG -- :   [1m[35m (322.1ms)[0m  CREATE  INDEX `index_telemetries_on_partner`  ON `telemetries` (`partner`) 
+D, [2015-10-26T23:49:16.401729 #7184] DEBUG -- :   [1m[36m (120.1ms)[0m  [1mCREATE  INDEX `index_telemetries_on_outpost_application`  ON `telemetries` (`outpost_application`) [0m
+D, [2015-10-26T23:49:16.536339 #7184] DEBUG -- :   [1m[35m (131.4ms)[0m  CREATE  INDEX `index_telemetries_on_group_id`  ON `telemetries` (`group_id`) 
+D, [2015-10-26T23:49:16.815740 #7184] DEBUG -- :   [1m[36m (276.2ms)[0m  [1mCREATE  INDEX `index_telemetries_on_date`  ON `telemetries` (`date`) [0m
+D, [2015-10-26T23:49:16.894769 #7184] DEBUG -- :   [1m[35m (75.2ms)[0m  CREATE TABLE `load_logs` (`id` int(11) auto_increment PRIMARY KEY, `created_at` datetime, `email_date` datetime, `loader` varchar(64), `new_lines` int(11) DEFAULT 0, `duplicate_lines` int(11) DEFAULT 0, `line_errors` int(11) DEFAULT 0, `attachments` int(11) DEFAULT 0) ENGINE=InnoDB
+D, [2015-10-26T23:49:17.039531 #7184] DEBUG -- :   [1m[36m (141.4ms)[0m  [1mCREATE  INDEX `index_load_logs_on_loader`  ON `load_logs` (`loader`) [0m
+D, [2015-10-26T23:49:17.049381 #7184] DEBUG -- :   [1m[35m (0.8ms)[0m  BEGIN
+D, [2015-10-26T23:49:17.058558 #7184] DEBUG -- :   [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('1')[0m
+D, [2015-10-26T23:49:17.095008 #7184] DEBUG -- :   [1m[35m (35.9ms)[0m  COMMIT

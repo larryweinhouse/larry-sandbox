@@ -1,0 +1,33 @@
+#!/usr/bin/env ruby
+
+require 'optparse'
+
+path = File.expand_path('../',File.dirname(__FILE__))
+
+options = {
+  gmail_username: ENV['gmail_username'],
+  gmail_password: ENV['gmail_password'],
+  loaders: [:TelemetryLoader]
+}
+
+o = OptionParser.new do |opts|
+  opts.separator  "partner services telemetry mail fetch and loader"
+  opts.banner +=  " PARTNER"
+  
+  opts.on("--gmail_username USERNAME", String, "gmail username") {|v| options[:gmail_username]=v}
+  opts.on("--gmail_password PASSWORD", String, "gmail password") {|v| options[:gmail_password]=v}
+  opts.on("-v", "--version", "output version number")  {|v| options[:print_version] = v }
+  opts.on("-h", "--help", "shows this help message")           { puts opts.to_s; exit }
+end
+
+o.parse!(ARGV) rescue abort o.to_s
+
+require path + '/lib/ps_telemetry'
+
+if options[:print_version]
+  puts "PSMail Version: #{PSTelemetry::VERSION}"
+  abort o.to_s
+else
+  loader = PSTelemetry::Loader.new(options)
+  loader.run
+end
