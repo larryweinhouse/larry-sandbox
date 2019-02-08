@@ -20,9 +20,9 @@
   - These files are a subset of our index which have been vetted and contain only approved attributes suitable for partner consumption. These files act as a source of truth so that any human or machine can further process producing standard or custom datasets.
   
 - **Standard and diffs data sets**
-  - A set of standard files are also placed on nfs for Internal customers.
+  - A set of standard files are placed on nfs for Internal customers.
     - nfs://share/exports/uploaded/FACTUAL_MASTER/outfiles
-  - This is list of our standard products along with naming convention. see this [env file](https://github.com/Factual/PartnerServices/blob/master/auto_updates/workflow/Drakefile.delivery.env) for schema:
+  - Following is list of our standard products along with naming convention. see this [env file](https://github.com/Factual/PartnerServices/blob/master/auto_updates/workflow/Drakefile.delivery.env) for schema:
 ```
 STANDARD FILES:
 [a-z][a-z]_places.factual
