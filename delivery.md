@@ -3,10 +3,10 @@
 ### 1) Who are our clients and what products are furnished
 - **Licensed clients**
   - Clients that have an ongoing contract expecting delivery every 4 to 6 weeks
-  - Products include Standard, Custom, and Diffs data sets.
+  - Products include: Standard, Custom, and Diffs data sets.
 - **Licensed one time download clients**
   - Clients that purchase a one time download of Factual data, for example lead generation.
-  - Products include: Standard, Custom, and Diffs data sets.
+  - Products include: Standard or Custom data sets.
 - **Prospective clients**
   - Samples of any standard or custom dataset delivered via Dropbox link or email
 - **Internal clients**
@@ -17,15 +17,12 @@
 
 - **Intermediate files** (59 versions currently named outfiles)
   - you can find current outfiles at: nfs://share/exports/uploaded/FACTUAL_MASTER/outfiles
-  - These files are a subset of our index which have been vetted and have only approved attributes for partner consumption. These files act as a source of truth so that any human or machine can consume to produce standard or custom datasets.
+  - These files are a subset of our index which have been vetted and approved attributes suitable for partner consumption. These files act as a source of truth so that any human or machine can further process producing standard or custom datasets.
   
 - **Standard and diffs data sets**
-  - Delivery options 
-    - Factual Dropbox or SFTP endpoint.
-    - Client SFTP or AWS bucket. We must have passwords and ability to send via command line
-    - Client Web interface. We can only send a file to Dropbox "Custom_Download_Support" Folder and Account Management sends manually.
-  - A set of standard files are also placed on nfs for Internal customers. nfs://share/exports/uploaded/FACTUAL_MASTER/outfiles
-  - Here are our standard products along with naming convention:
+  - A set of standard files are also placed on nfs for Internal customers.
+    - nfs://share/exports/uploaded/FACTUAL_MASTER/outfiles
+  - This is list of our standard products along with naming convention. see this [env file](https://github.com/Factual/PartnerServices/blob/master/auto_updates/workflow/Drakefile.delivery.env) for schema:
 ```
 STANDARD FILES:
 [a-z][a-z]_places.factual
@@ -50,29 +47,35 @@ DIFFS FILES:
   i.e. places_batch-diff.factual
 ```
 - **Data sets for ad-hoc delivery**  
-This is a set of our standard data sets as listed above placed on Dropbox so that Account Managers can send quickly on an ad-hoc basis to new clients. This will no longer be necessary if our ui will allow Account Managers to easily set up a new client.
+These are standard data sets as listed above placed on Dropbox so that Account Managers can send quickly on ad-hoc basis to to clients/prospects. This will no longer be necessary if our ui will allow Account Managers to easily set up a new client and immediately deliver.
 
 - **Custom data sets**
-  - Delivery options same as standard data sets (see above).
   - These all come from standard data views but have additional processing on columns and or rows.
-  - we currently use and environment file and scripts to do the processing
-  - Here is the naming convention for custom data sets which will allow the same delivery workflow for these as well as above sets.
+  - we currently use an [environment file](https://github.com/Factual/PartnerServices/blob/master/auto_updates/custom_download_support/custom_download_support.env) and scripts to do the processing
+  - Here is the naming convention for custom data sets which will allow standard delivery workflow.
 ```
 CUSTOM:
 <client_identifier>_<standard dataset name>.factual
   i.e. fav_client_bla_bla_bla_us_places.factual
 ```
 - **Delivery notification**  
-If data is delivered to Factual delivery endpoints, we will send delivery notification. If we send to a clients endpoint we do not notify.
+If data is delivered to Factual delivery endpoints, we will send delivery email notification. If we send to a clients endpoint we do not send notifications.
 
 - **Product samples**   
-We furnish samples for slices of any of our standard datasets in the format of final delivered product and deliver to Dropbox with a download link.
+We furnish samples (slices of rows/columns) of any of our standard datasets in the same format as our final delivered products as to set expectations. Samples are delivered to Dropbox and customer is sent a download link.
 
 - **Self service [database](https://github.com/Factual/data-projects/tree/develop/projects/api-downloader/sales_db)**
-This is self service sql database that we load up at each of our builds that contain standard data sets. This is used by Internal users to explore and download to be used for further processing or delivery as samples to prospects or clients.
+This is self service sql database that we load at each of our builds including tables for standard data sets. This is used by Internal clients to explore, download, or use for further processing.
 
 - **[stats](https://docs.google.com/spreadsheets/d/1kHMToN9rsTO5ytX-BgCc8rEJ2GKNWt94HJOeVbxiMyk/edit?usp=drive_web&ouid=106487463529999467763) sheet**  
-We deliver a stats sheet for internal users to use for questions about data. This is used both internally and shared externally with prospects and clients.
+We deliver a stats sheet for internal users to use for general questions about data. This is used both internally and shared externally with prospects and clients.
+
+- **Delivery Options**
+We have been able to satisfy all delivery requirements with the following three options.
+- Factual Dropbox or SFTP endpoints.
+- Client SFTP or AWS bucket. We **must** have passwords/keys and the ability to send via command line.
+- Client Web interface:
+  - This is a **very undesireable option**. Currently we do not have any partners that require this. We have accomidated this in the past by placing files in our Dropbox "Custom_Download_Support" Folder. Account Managers are then tasked to manually download to their laptop and upload to the clients GUI.
 
 ### 3) Current Process
 
