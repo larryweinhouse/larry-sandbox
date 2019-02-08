@@ -11,17 +11,17 @@
   - Things like private places files, additional attributes such as melissa_addresses,existence_full etc placed in outfiles acting as guardrails for further processing.
   
   
-### 2) Products
+### 2) Deliverables
 
 - **Intermediate files** (59 versions currently named outfiles)
   - you can find current outfiles at: nfs://share/exports/uploaded/FACTUAL_MASTER/outfiles
-  - These files are a subset of our index which have been veted and have only approved attributes for partner consumption. These files act as a source of truth so that any human or machine can consume to produce standard or custom datasets.
+  - These files are a subset of our index which have been vetted and have only approved attributes for partner consumption. These files act as a source of truth so that any human or machine can consume to produce standard or custom datasets.
   
 - **Standard and diffs data sets**
   - Delivery options 
     - Factual Dropbox or SFTP endpoint.
     - Client SFTP or AWS bucket. We must have passwords and ability to send via command line
-    - Client Web interface. We can only send a file to Dropbox "Custom_Download_Support" Folder and Account Management sends manualy.
+    - Client Web interface. We can only send a file to Dropbox "Custom_Download_Support" Folder and Account Management sends manually.
   - A set of standard files are also placed on nfs for Internal customers. nfs://share/exports/uploaded/FACTUAL_MASTER/outfiles
   - Here are our standard products along with naming convention:
 ```
@@ -48,12 +48,12 @@ DIFFS FILES:
   i.e. places_batch-diff.factual
 ```
 - **Data sets for ad-hoc delivery**  
-This is a set of our standard data sets as listed above placed on Dropbox so that Account Managers can send quickly on an ad-hoc basis to new clients. This will no longer be necessary if our ui will allow Account Managers to easliy set up a new client.
+This is a set of our standard data sets as listed above placed on Dropbox so that Account Managers can send quickly on an ad-hoc basis to new clients. This will no longer be necessary if our ui will allow Account Managers to easily set up a new client.
 
 - **Custom data sets**
   - Delivery options same as standard data sets (see above).
   - These all come from standard data views but have additional processing on columns and or rows.
-  - we currently use and environmant file and scripts to do the processing
+  - we currently use and environment file and scripts to do the processing
   - Here is the naming convention for custom data sets which will allow the same delivery workflow for these as well as above sets.
 ```
 CUSTOM:
@@ -61,7 +61,7 @@ CUSTOM:
   i.e. fav_client_bla_bla_bla_us_places.factual
 ```
 - **Delivery notification**  
-If data is deliverd to Factual delivery endpoints, we will send delivery notification. If we send to a clients endpoint we do not notifiy.
+If data is delivered to Factual delivery endpoints, we will send delivery notification. If we send to a clients endpoint we do not notify.
 
 - **Product samples**   
 We furnish samples for slices of any of our standard datasets in the format of final delivered product and deliver to Dropbox with a download link.
@@ -78,10 +78,10 @@ We deliver a stats sheet for internal users to use for questions about data. Thi
 this is our source of truth for who gets what
 
 - **Naming convention**
-It is very important to include the date that links us to the particular build. "us_places.factual.2019-01-22.1548972589.tab.gz" In this example the build directory is 2019-01-22.
+See above for naming convention of all products. It is very important to include the date that links us to the particular build. For example: "us_places.factual.2019-01-22.1548972589.tab.gz" Is created with data in build directory 2019-01-22.
 
-- **Current [workflow](https://github.com/Factual/PartnerServices/tree/master/auto_updates/workflow)**
-This is a series of one liners and Drake workflows that get us from a to z for a build cycle :-)
+- **[Current workflow](https://github.com/Factual/PartnerServices/tree/master/auto_updates/workflow)**
+This is a series of Drake workflow jobs and one liners that get us from a to z for a delivery cycle :-) This page also shows the roadmap as to where I have wanted to take the delivery project.
 
 
 
