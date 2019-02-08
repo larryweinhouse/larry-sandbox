@@ -1,13 +1,15 @@
-## Data Delivery Pipeline Requirements:
+## Requirements, Places Delivery Pipeline
 
-### 1) Who are our clients
-- Licensed clients
+### 1) Who are our clients and what products are furnished
+- **Licensed clients**
   - Clients that have an ongoing contract expecting delivery every 4 to 6 weeks
-- Licensed one time download
+  - Products include Standard, Custom, and Diffs data sets.
+- **Licensed one time download clients**
   - Clients that purchase a one time download of Factual data, for example lead generation.
-- Prospective clients
-  - Samples of any standard or custom dataset delivered via Dropbox link
-- Internal clients
+  - Products include: Standard, Custom, and Diffs data sets.
+- **Prospective clients**
+  - Samples of any standard or custom dataset delivered via Dropbox link or email
+- **Internal clients**
   - Things like private places files, additional attributes such as melissa_addresses,existence_full etc placed in outfiles acting as guardrails for further processing.
   
   
