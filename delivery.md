@@ -72,7 +72,7 @@ This is self service sql database that we load up at each of our builds that con
 - **[stats](https://docs.google.com/spreadsheets/d/1kHMToN9rsTO5ytX-BgCc8rEJ2GKNWt94HJOeVbxiMyk/edit?usp=drive_web&ouid=106487463529999467763) sheet**  
 We deliver a stats sheet for internal users to use for questions about data. This is used both internally and shared externally with prospects and clients.
 
-### Current Process
+### 3) Current Process
 
 - **Configuration [file](https://github.com/Factual/PartnerServices/blob/master/auto_updates/scripts/clients.yaml)**
 this is our source of truth for who gets what
