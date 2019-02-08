@@ -72,5 +72,16 @@ This is self service sql database that we load up at each of our builds that con
 - **[stats](https://docs.google.com/spreadsheets/d/1kHMToN9rsTO5ytX-BgCc8rEJ2GKNWt94HJOeVbxiMyk/edit?usp=drive_web&ouid=106487463529999467763) sheet**  
 We deliver a stats sheet for internal users to use for questions about data. This is used both internally and shared externally with prospects and clients.
 
-- **stats**
+### Current Process
+
+- **Configuration [file](https://github.com/Factual/PartnerServices/blob/master/auto_updates/scripts/clients.yaml)**
+this is our source of truth for who gets what
+
+- **Naming convention**
+It is very important to include the date that links us to the particular build. "us_places.factual.2019-01-22.1548972589.tab.gz" In this example the build directory is 2019-01-22.
+
+- **Current [workflow](https://github.com/Factual/PartnerServices/tree/master/auto_updates/workflow)**
+This is a series of one liners and Drake workflows that get us from a to z for a build cycle :-)
+
+
 
