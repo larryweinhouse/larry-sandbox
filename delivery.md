@@ -47,11 +47,11 @@ DIFFS FILES:
   i.e. places_batch-diff.factual
 ```
 - **Data sets for ad-hoc delivery**  
-These are standard data sets as listed above placed on Dropbox so that Account Managers can send quickly on ad-hoc basis to to clients/prospects. This will no longer be necessary if our ui will allow Account Managers to easily set up a new client and immediately deliver.
+These are standard data sets as listed above placed on Dropbox so that Account Managers can send quickly on ad-hoc basis to clients/prospects. This will no longer be necessary if our ui will allow Account Managers to easily set up a new client and immediately deliver.
 
 - **Custom data sets**
   - These all come from standard data views but have additional processing on columns and or rows.
-  - we currently use an [environment file](https://github.com/Factual/PartnerServices/blob/master/auto_updates/custom_download_support/custom_download_support.env) and scripts to do the processing
+  - we currently use an [environment file](https://github.com/Factual/PartnerServices/blob/master/auto_updates/custom_download_support/custom_download_support.env) and [scripts](https://github.com/Factual/PartnerServices/tree/master/auto_updates/custom_download_support) to do the processing
   - Here is the naming convention for custom data sets which will allow standard delivery workflow.
 ```
 CUSTOM:
@@ -64,7 +64,7 @@ If data is delivered to Factual delivery endpoints, we will send delivery email 
 - **Product samples**   
 We furnish samples (slices of rows/columns) of any of our standard datasets in the same format as our final delivered products as to set expectations. Samples are delivered to Dropbox and customer is sent a download link.
 
-- **Self service [database](https://github.com/Factual/data-projects/tree/develop/projects/api-downloader/sales_db)**
+- **Self service [database](https://github.com/Factual/data-projects/tree/develop/projects/api-downloader/sales_db)**  
 This is self service sql database that we load at each of our builds including tables for standard data sets. This is used by Internal clients to explore, download, or use for further processing.
 
 - **[stats](https://docs.google.com/spreadsheets/d/1kHMToN9rsTO5ytX-BgCc8rEJ2GKNWt94HJOeVbxiMyk/edit?usp=drive_web&ouid=106487463529999467763) sheet**  
