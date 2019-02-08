@@ -1,6 +1,6 @@
 ## Requirements, Places Delivery Pipeline
 
-### 1) Who are our clients and what products are furnished
+### 1) Who are our clients and what products do they get
 - **Licensed clients**
   - Clients that have an ongoing contract expecting delivery every 4 to 6 weeks
   - Products include: Standard, Custom, and Diffs data sets.
