@@ -71,11 +71,11 @@ This is self service sql database that we load at each of our builds including t
 We deliver a stats sheet for internal users to use for general questions about data. This is used both internally and shared externally with prospects and clients.
 
 - **Delivery Options**
-We have been able to satisfy all delivery requirements with the following three options.
-- Factual Dropbox or SFTP endpoints.
-- Client SFTP or AWS bucket. We **must** have passwords/keys and the ability to send via command line.
-- Client Web interface:
-  - This is a **very undesireable option**. Currently we do not have any partners that require this. We have accomidated this in the past by placing files in our Dropbox "Custom_Download_Support" Folder. Account Managers are then tasked to manually download to their laptop and upload to the clients GUI.
+- We have been able to satisfy all delivery requirements with the following three options.
+  - Factual Dropbox or SFTP endpoints.
+  - Client SFTP or AWS bucket. We **must** have passwords/keys and the ability to send via command line.
+  - Client Web interface:
+    - This is a **very undesireable option**. Currently we do not have any partners that require this. We have accomidated this in the past by placing files in our Dropbox "Custom_Download_Support" Folder. Account Managers are then tasked to manually download to their laptop and upload to the clients GUI.
 
 ### 3) Current Process
 
