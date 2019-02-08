@@ -10,7 +10,7 @@
 - **Prospective clients**
   - Samples of any standard or custom dataset delivered via Dropbox link or email
 - **Internal clients**
-  - Things like private places files, additional attributes such as melissa_addresses,existence_full etc placed in outfiles acting as guardrails for further processing.
+  - Things like standard data sets (csv), self service db, private places files, and files with additional attributes such as melissa_addresses,existence_full,status, etc. delivered in outfiles acting as guardrails for further processing.
   
   
 ### 2) Deliverables
